@@ -1,0 +1,292 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+a {
+    color: #00e;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #06e;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/**
+dark - 051015
+base - 0a1b22
+light - 2f5463
+**/
+
+body{height: 100%;background:#0a1b22;font-family: 'robotolight';color:#fff;overflow: hidden;}
+nav{ text-align: center;position: relative; background: #051015;z-index: 15;}
+#main{position: absolute;top:60px;left: 0;right: 0;bottom: 0;z-index: 11;}
+    #main-container{position: relative;}
+a{text-decoration: none;}
+div{box-sizing: border-box;}
+.logo{width: 100px;padding: .5em;}
+.feeds{position: relative;}
+.feed-item{width: 90%;margin: .7em auto;padding: .5em;position: relative;border-bottom: 1px solid #0b1d25;transition: all .2s linear;border-bottom: 1px solid #162d35;}
+    .meta{font-size: 1em;width:80%;float: left;padding: 0 .5em;}
+    .avatar{width: 20%;float: left;padding: .2em 0;text-align: center;}
+        .avatar img{width: 80%;border-radius: 50%;vertical-align: middle;}
+    .title a{color: #1bcdd9;font-family:'robotothin';font-size: 1.2em; }
+    .date,.author{color:#2f5463;font-size: .8em;}
+    .content-preview{ height: 60px;margin-bottom: .5em; overflow: hidden;clear: both;padding: .5em;font-size: .8em;font-family: 'robotoregular';color:#d0dee3;}
+    .vote-up{display: inline-block;width: 35px;height: 35px;background: #08171e url('../img/up.svg') center center no-repeat; background-size: 20px;margin-right: .3em;}
+    .vote-down{display: inline-block;width: 35px;height: 35px;background: #08171e url('../img/down.svg') center center no-repeat; background-size: 20px;}
+    .more-btn{display: inline-block;height: 35px;width: 35px;background: url('../img/right-arrow.svg') center center no-repeat;background-size: 20px;}
+    .controls{position: relative;}
+#write{display: inline-block;width: 40px;height: 40px; margin: .5em; position: absolute; top:0; left: .2em;background: url('../img/write.svg') center center no-repeat; background-size: 35px;}
+    #write.write-open{background: url('../img/write-open.svg') center center no-repeat;background-size: 35px;}
+#post{background: #051015;transition: all .3s ease-in-out;z-index: 15;width: 100%;position: absolute;top:55px;left: 0;right: 0;bottom: 0;display: none;}
+    #post.post-shown{display: block;}
+    .post-content{position: relative;}
+        #close-post img{width: 35px;}
+    .post-form{width: 80%;margin: 0 auto;position: relative;padding: .5em .5em 1em;}
+    .form-field{text-align: right;padding: .5em;}
+        .label{font-size: .8em;text-align: left;margin: .5em auto;}
+        .form-input{width: 80%;}
+        textarea{height: 100px;}
+#view-post{position: absolute;top:55px;left:0;right: 0;bottom: 0;background: #0a1b22;z-index: 12;display: none;}
+    #post-content{position: relative;margin: 0 auto;width: 90%;background: }
+    .back-btn.back-btn{display: inline-block;padding:.5em 25px; background: url('../img/left-arrow.svg') center left no-repeat;background-size: 20px;color:#50be11;}
+    #post-content>div{position: relative;}
+    #post-content .controls{margin: 1em 0;}
+    .feed-content{clear: both;}
+
+.btn{color: #fff;padding: .5em 1em;text-transform: uppercase;border: 0;font-family:'robotoregular'; display: inline-block;margin: 0 .5em; }
+    .primary{background: #1bcdd9;}
+    .secondary{background: #e8562d;}
+.text-center{text-align: center;}
+.text-right{text-align: right;}
+.pull-left{float: left;}
+.pull-right{float: right;}
+
+
+
+@media (min-width:768px){
+.feeds{text-align: center;}
+.feed-item{width: 40%;margin: .3%; auto;display: inline-block;text-align: left;}
+}
+
+@media (min-width:1024px){
+.feeds{text-align: center;}
+.feed-item{width: 30%;margin: .2%; auto;display: inline-block;text-align: left;}
+}
+
+
+
+
+
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/Roboto-Light-webfont.eot');
+    src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Light-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('../fonts/Roboto-Thin-webfont.eot');
+    src: url('../fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Thin-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Thin-webfont.svg#robotothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/* Prevent callout */
+
+.nocallout {
+    -webkit-touch-callout: none;
+}
+
+.pressed {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+   they have been set as display: none */
+
+.gifhidden {
+    position: absolute;
+    left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+
+.ir br {
+    display: none;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}

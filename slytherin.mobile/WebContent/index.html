@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" sizes="196x196" href="img/touch/touch-icon-196x196.png">
+        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#222222">
+
+        <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page -->
+        <!--
+        <link rel="canonical" href="http://www.example.com/" >
+        -->
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <!--
+        <meta name="mobile-web-app-capable" content="yes">
+        -->
+
+        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+        <!--
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="">
+        -->
+
+        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+        <!--
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    </head>
+    <body>
+        <nav class="clearfix">
+            <a href="#" id="write"></a>
+            <img src="img/iSigaw.svg" class="logo"/>
+        </nav>
+        <div id="post">
+            <div class="post-content clearfix">
+                <div class="post-form">
+                    <div class="form-field">
+                        <div class="label">Crime Type</div>
+                        <select class="form-input">
+                            <option>Prostitution</option>
+                            <option>Murder</option>
+                            <option>Theft</option>
+                            <option>Kidnapping</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <div class="label">Title</div>
+                        <input class="form-input" type="input"/>
+                    </div>
+                    <div class="form-field">
+                        <div class="label">Details</div>
+                        <textarea class="form-input"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button id="action-post" class="btn primary">Post</button>
+                        <button class="btn secondary" id="close-post">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="view-post">
+            <div id="post-content">
+                <div class="clearfix">
+                    <div class="controls text-right">
+                        <a href="#" class="vote-up"></a>
+                        <a href="#" class="vote-down"></a>
+                        <a href="#" class="back-btn pull-left">Back</a>
+                    </div>
+                    <div class="avatar">
+                        <a href="#"><img src="img/p-avatar-kebs.jpg"/></a>
+                    </div>
+                    <div class="meta">
+                        <div class="title"><a href="#">Lorem Ipsum Dolor Sit Amet</a></div>
+                        <div>
+                            <span class="author">Kebs</span>
+                            <span class="date">Aug 16,2014</span>
+                        </div>
+                    </div>
+                    <div class="feed-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius purus magna, sed blandit mi hendrerit ac. Suspendisse et tincidunt sapien, eu dapibus sapien. Proin sodales pretium erat non accumsan. Vivamus non leo vel odio bibendum gravida. Ut adipiscing cursus laoreet. In at vestibulum libero. Curabitur sed tellus nulla. Mauris condimentum leo vitae nunc rhoncus venenatis. In hac habitasse platea dictumst.</p>
+
+    <p>Aenean risus tellus, gravida a nunc hendrerit, sollicitudin interdum ante. Maecenas tincidunt accumsan rhoncus. Sed ut turpis ut ante viverra ultricies et sit amet augue. Phasellus vel mi a risus laoreet suscipit. Maecenas vulputate vitae dui ut iaculis. Maecenas vulputate tristique eros. Integer fringilla feugiat iaculis. Morbi consectetur fermentum justo, ac venenatis magna. Nam aliquam, quam nec dignissim pulvinar, turpis nisi tempus erat, sodales pellentesque velit lorem vel erat. Donec ac massa eleifend, facilisis sapien et, adipiscing felis. Sed at quam nisi. Praesent semper volutpat nulla ac consectetur. Aenean tincidunt egestas ante. Phasellus ac massa eget libero tempor ultrices eget sed odio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="main">
+            <div class="feeds">
+                <div class="feed-item">
+                    <div class="feed-item-meta clearfix">
+                        <div class="avatar">
+                            <a href="#"><img src="img/p-avatar-kebs.jpg"/></a>
+                        </div>
+                        <div class="meta">
+                            <div class="title"><a href="#">Lorem Ipsum Dolor Sit Amet</a></div>
+                            <div>
+                                <span class="author">Kebs</span>
+                                <span class="date">Aug 16,2014</span>
+                            </div>
+                        </div>
+                        <div class="content-preview">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius purus magna, sed blandit mi hendrerit ac. Suspendisse et tincidunt sapien, eu dapibus sapien. 
+                        </div>
+                        <div class="controls clearfix">
+                            <a href="#" class="vote-up"></a>
+                            <a href="#" class="vote-down"></a>
+                            <a href="#" class="more-btn pull-right"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feed-item">
+                    <div class="feed-item-meta clearfix">
+                        <div class="avatar">
+                            <a href="#"><img src="img/p-avatar-kebs.jpg"/></a>
+                        </div>
+                        <div class="meta">
+                            <div class="title"><a href="#">Lorem Ipsum Dolor Sit Amet</a></div>
+                            <div>
+                                <span class="author">Kebs</span>
+                                <span class="date">Aug 16,2014</span>
+                            </div>
+                        </div>
+                        <div class="content-preview">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius purus magna, sed blandit mi hendrerit ac. Suspendisse et tincidunt sapien, eu dapibus sapien. 
+                        </div>
+                        <div class="controls clearfix">
+                            <a href="#" class="vote-up"></a>
+                            <a href="#" class="vote-down"></a>
+                            <a href="#" class="more-btn pull-right"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feed-item">
+                    <div class="feed-item-meta clearfix">
+                        <div class="avatar">
+                            <a href="#"><img src="img/p-avatar-kebs.jpg"/></a>
+                        </div>
+                        <div class="meta">
+                            <div class="title"><a href="#">Lorem Ipsum Dolor Sit Amet</a></div>
+                            <div>
+                                <span class="author">Kebs</span>
+                                <span class="date">Aug 16,2014</span>
+                            </div>
+                        </div>
+                        <div class="content-preview">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius purus magna, sed blandit mi hendrerit ac. Suspendisse et tincidunt sapien, eu dapibus sapien. 
+                        </div>
+                        <div class="controls clearfix">
+                            <a href="#" class="vote-up"></a>
+                            <a href="#" class="vote-down"></a>
+                            <a href="#" class="more-btn pull-right"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feed-item">
+                    <div class="feed-item-meta clearfix">
+                        <div class="avatar">
+                            <a href="#"><img src="img/p-avatar-kebs.jpg"/></a>
+                        </div>
+                        <div class="meta">
+                            <div class="title"><a href="#">Lorem Ipsum Dolor Sit Amet</a></div>
+                            <div>
+                                <span class="author">Kebs</span>
+                                <span class="date">Aug 16,2014</span>
+                            </div>
+                        </div>
+                        <div class="content-preview">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius purus magna, sed blandit mi hendrerit ac. Suspendisse et tincidunt sapien, eu dapibus sapien. 
+                        </div>
+                        <div class="controls clearfix">
+                            <a href="#" class="vote-up"></a>
+                            <a href="#" class="vote-down"></a>
+                            <a href="#" class="more-btn pull-right"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+    
+            </div>
+        </div>
+
+        <script src="js/vendor/jquery-2.1.0.min.js"></script>
+        <script src="js/helper.js"></script>
+        <script src="js/vendor/iscroll-lite.js"></script>
+        <script src="js/vendor/hammer.min.js"></script>
+        <script src="js/vendor/jquery.hammer.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script> -->
+    </body>
+</html>
