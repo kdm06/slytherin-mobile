@@ -4,24 +4,15 @@ jQuery(function($){
         scrollbars: true
     });
     
+    
     var feedContentScroll = new IScroll("#view-post",{
         mouseWheel: true,
         scrollbars: true
     });
-   /*var writeBtn = new Hammer($("#write").get(0));
-    writeBtn.on('tap', function(ev) {
-        $("#post").addClass("post-shown");
-        $(this).scrollTop(0);
-        return false;
-    });
-    
-    var closePostBtn = new Hammer($("#close-post").get(0));
-    closePostBtn.on('tap', function(ev) {
-        $("#post").removeClass("post-shown");
-        return false;
-    });*/
-    
     $('#write').hammer().bind('tap', function(){
+        $("#menu-panel").removeClass("menu-panel-shown");
+        $("#menu").removeClass("menu-shown");
+
         $("#post").toggleClass("post-shown");
             if($("#post").is(".post-shown")){
                 $("#write").addClass("write-open");
@@ -39,16 +30,44 @@ jQuery(function($){
          
     });
     
+    $("#menu").hammer().bind('tap', function(){
+        $("#post").removeClass("post-shown");
+        $("#write").removeClass("write-open");
+        
+       $("#menu-panel").toggleClass("menu-panel-shown");
+       if($("#menu-panel").is(".menu-panel-shown")){
+            $("#menu").addClass("menu-shown");
+       }else{
+            $("#menu").removeClass("menu-shown");
+       }
+        
+        return false;
+         
+    });
+    
     $(".title a,.more-btn").hammer().bind('tap', function(){
         $("#view-post").css({display:"block"});
         var feedContentScroll = new IScroll("#view-post",{
         mouseWheel: true,
         scrollbars: true
         });
+        return false;
     });
     
     $(".back-btn").hammer().bind('tap', function(){
         $("#view-post").css({display:"none"});
+        return false;
+    });
+    
+    $("#menu-panel .close-menu").hammer().bind('tap', function(){
+       $("#menu-panel").toggleClass("menu-panel-shown");
+       if($("#menu-panel").is(".menu-panel-shown")){
+            $("#menu").addClass("menu-shown");
+       }else{
+            $("#menu").removeClass("menu-shown");
+       }
+
+        return false;
     });
     
     $("#action-post").hammer().bind('tap', function(){
