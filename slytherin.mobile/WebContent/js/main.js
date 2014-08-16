@@ -81,4 +81,31 @@ jQuery(function($){
             
         })
     });
+    
+    getLocation();
 });
+
+function getLocation(){
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(savePosition);
+        
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function savePosition(position) {
+   
+    var address;
+    $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.coords.latitude+","+position.coords.longitude, function(key,val){
+        address = key;
+        address = address.results[2].formatted_address;
+        console.log(address);
+         $(".location").html(
+             address + "<br/>" +
+             position.coords.latitude+","+position.coords.longitude
+         );
+    });
+    
+    
+}
